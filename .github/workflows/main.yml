@@ -16,8 +16,8 @@ jobs:
       uses: ./.github/actions/build
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
-      env:
-        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        EXTERNAL_REPOSITORY: Toshahiko/Toshahiko.github.io
+      with:
+        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        external_repository: Toshahiko/Toshahiko.github.io
         PUBLISH_BRANCH: master
         PUBLISH_DIR: ./book
